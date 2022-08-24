@@ -404,24 +404,28 @@
             <h1 class="font-size-50px"><span>Pizza</span>'s List</h1>
         </div>
         <div class="text-center">
-            <p>{{ $type }} - {{ $base }} - {{ $price }}</p>
 
-            @if($price > 15)
-                <p>this pizza is expensive</p>
-            @elseif($price < 5)
-                <p>this pizza is cheap</p>
-            @else
-                <p>this pizza is normally price</p>
-            @endif
+            {{--@for($i = 0; $i < 5; $i++)
+                <p>the value of i is {{ $i }}</p>
+            @endfor--}}
 
-            @unless($base == 'cheesy crust')
-                <p>you don't have a cheesy crust</p>
-            @endunless
+            {{--@for($i = 0; $i < count($pizzas); $i++)
+                <p>{{ $pizzas[$i]['type'] }}</p>
+            @endfor--}}
 
-            @php
-                $name = 'Jiyan';
-                echo $name;
-            @endphp
+            @foreach($pizzas as $key => $pizza)
+                <div>
+                    {{ $loop->index }}
+                    <span>=></span>
+                    {{ $pizza['type'] }} - {{ $pizza['base'] }}
+                    @if($loop->first)
+                        <span>- first in the loop</span>
+                    @endif
+                    @if($loop->last)
+                        <span>- last in the loop</span>
+                    @endif
+                </div>
+            @endforeach
 
         </div>
     </div>
