@@ -403,7 +403,27 @@
         <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
             <h1 class="font-size-50px"><span>Pizza</span>'s List</h1>
         </div>
-        <p>{{ $type }} - {{ $base }} - {{ $price }}</p>
+        <div class="text-center">
+            <p>{{ $type }} - {{ $base }} - {{ $price }}</p>
+
+            @if($price > 15)
+                <p>this pizza is expensive</p>
+            @elseif($price < 5)
+                <p>this pizza is cheap</p>
+            @else
+                <p>this pizza is normally price</p>
+            @endif
+
+            @unless($base == 'cheesy crust')
+                <p>you don't have a cheesy crust</p>
+            @endunless
+
+            @php
+                $name = 'Jiyan';
+                echo $name;
+            @endphp
+
+        </div>
     </div>
 </div>
 
