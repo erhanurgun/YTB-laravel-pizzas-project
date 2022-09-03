@@ -6,6 +6,7 @@
         "php": "php artisan serve",
         "make-ctrl": "php artisan make:controller DemoController",
         "make-migr": "php artisan make:migration create_demo_table",
+        "make-mode": "php artisan make:model Demo",
         "migr": "php artisan migrate",
         "migr-fr": "php artisan migrate:fresh"
     },
