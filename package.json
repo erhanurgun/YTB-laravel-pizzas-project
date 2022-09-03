@@ -4,7 +4,10 @@
         "dev": "vite",
         "build": "vite build",
         "php": "php artisan serve",
-        "make": "php artisan make:controller DemoController"
+        "make-ctrl": "php artisan make:controller DemoController",
+        "make-migr": "php artisan make:migration create_demo_table",
+        "migr": "php artisan migrate",
+        "migr-fr": "php artisan migrate:fresh"
     },
     "devDependencies": {
         "axios": "^0.27",

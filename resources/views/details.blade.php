@@ -8,10 +8,7 @@
             <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                 <h1 class="font-size-50px"><span>Pizza</span> List - #{{ $id }}</h1>
             </div>
-            <div class="text-center">
 
-
-            </div>
         </div>
     </div>
 @endsection
