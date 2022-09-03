@@ -3,7 +3,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "php": "php artisan serve"
+        "php": "php artisan serve",
+        "make": "php artisan make:controller DemoController"
     },
     "devDependencies": {
         "axios": "^0.27",
