@@ -427,6 +427,11 @@
                 </div>
             @endforeach
 
+            @php
+                $name = 'JiyanOS';
+                echo "<b>$name</b>";
+            @endphp
+
         </div>
     </div>
 </div>
