@@ -17,7 +17,7 @@
             {{--@for($i = 0; $i < count($pizzas); $i++)
                 <p>{{ $pizzas[$i]['type'] }}</p>
             @endfor--}}
-
+{{-- fixed commit --}}
             @foreach($pizzas as $key => $pizza)
                 <div>
                     {{ $loop->index }}
