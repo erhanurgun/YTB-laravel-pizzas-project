@@ -2,30 +2,67 @@
 
 @section('content')
     <div class="wrapper create-pizza">
-        <h1>Create a new<span>pizza</span>
-            <form action="/pizzas" method="POST">
-                @csrf {{-- güvenli form gönderme için gerekli --}}
-                <label for="name">Your name:</label>
-                <input type="text" name="name" id="name">
+        <h1>Create a new <span>pizza</span></h1>
 
-                <label for="type">Choose pizza type:</label>
-                <select name="type" id="type">
-                    <option value="margherita">Margherita</option>
-                    <option value="hawaiian">Hawaiian</option>
-                    <option value="veg supreme">Veg Supreme</option>
-                    <option value="volcano">Volcano</option>
-                </select>
+        <form action="/pizzas" method="POST">
+            @csrf {{-- güvenli form gönderme için gerekli --}}
+            <table>
+                <tr>
+                    <td><label class="f-r" for="name">Your name:</label></td>
+                    <td><input type="text" name="name" id="name"></td>
+                </tr>
+                <tr>
+                    <td><label class="f-r" for="type">Choose pizza type:</label></td>
+                    <td>
+                        <select name="type" id="type">
+                            <option value="0" disabled selected>--- choose ---</option>
+                            <option value="margherita">Margherita</option>
+                            <option value="hawaiian">Hawaiian</option>
+                            <option value="veg supreme">Veg Supreme</option>
+                            <option value="volcano">Volcano</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="f-r" for="base">Choose base type:</label></td>
+                    <td>
+                        <select name="base" id="base">
+                            <option value="0" disabled selected>--- choose ---</option>
+                            <option value="chessy crust">Chessy Crust</option>
+                            <option value="garlic crust">Garlic Crust</option>
+                            <option value="thin & crispy">Thin & Crispy</option>
+                            <option value="thick">Thick</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="f-r">Extra toppings:</label></td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" name="toppings[]" value="mushrooms" id="mushrooms"></td>
+                                <td><label for="mushrooms">Mushrooms</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="toppings[]" value="peppers" id="peppers"></td>
+                                <td><label for="peppers">Peppers</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="toppings[]" value="garlic" id="garlic"></td>
+                                <td><label for="garlic">Garlic</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="toppings[]" value="olives" id="olives"></td>
+                                <td><label for="olives">Olives</label></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Order Pizza"></td>
+                </tr>
+            </table>
+        </form>
 
-                <label for="base">Choose base type:</label>
-                <select name="base" id="base">
-                    <option value="chessy crust">Chessy Crust</option>
-                    <option value="garlic crust">Garlic Crust</option>
-                    <option value="thin & crispy">Thin & Crispy</option>
-                    <option value="thick">Thick</option>
-                </select>
-
-                <input type="submit" value="Order Pizza">
-            </form>
-        </h1>
     </div>
 @endsection

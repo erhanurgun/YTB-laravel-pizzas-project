@@ -15,9 +15,64 @@ body {
     display: none
 }
 
-*, :after, :before {
+*:not(input, select), :after, :before {
     box-sizing: border-box;
     border: 0 solid #e2e8f0
+}
+
+.f-r {
+    float: right;
+}
+
+form {
+    border: 1px solid #fab700;
+    margin: 20px;
+    width: 400px;
+    padding: 10px 0 15px 10px;
+    border-radius: 3px;
+}
+
+input, textarea, button {
+    width: 100%;
+}
+
+select {
+    width: 107.7%;
+}
+
+input, textarea, button, select {
+    padding: 5px;
+    border-radius: 3px;
+}
+
+input:hover, textarea:hover, button:hover, select:hover {
+    transition: all 300ms;
+    background-color: #fff;
+    border-color: #fab700;
+}
+
+input:hover, textarea:hover, button:hover, select:hover,
+input:focus, textarea:focus, button:focus, select:focus {
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #fab700;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 3px;
+    padding: 10px 0px;
+    width: 104%;
+    border: 1px solid #cbcbcb;
+}
+
+input[type="submit"]:hover {
+    transition: all 300ms;
+    background-color: #fff;
+    color: #fab700;
+    border: 1px solid #fab700;
 }
 
 a {
