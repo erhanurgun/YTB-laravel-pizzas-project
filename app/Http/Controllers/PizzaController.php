@@ -20,10 +20,14 @@ class PizzaController extends Controller
 
     public function show($id)
     {
-        return view('pizzas.show', ['id' => $id]);
+        // $pizza = Pizza::find($id);       // id değeri varsa getir
+        $pizza = Pizza::findOrFail($id);    // id değeri varsa getir yoksa 404'e gönder
+
+        return view('pizzas.show', ['pizza' => $pizza]);
     }
 
-    public function create(){
+    public function create()
+    {
         return view('pizzas.create');
     }
 }

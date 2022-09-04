@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// bu kısımdaki sıralama önemli!
 Route::get('/pizzas', [PizzaController::class, 'index']);
 Route::get('/pizzas/create', [PizzaController::class, 'create']);
 Route::get('/pizzas/{id}', [PizzaController::class, 'show']);

@@ -1,14 +1,10 @@
 @extends('layouts.layout')
 
 @section('content')
-    <div
-        class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-
-            <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                <h1 class="font-size-50px"><span>Pizza</span> List - #{{ $id }}</h1>
-            </div>
-
-        </div>
+    <div class="wrapper pizza-details">
+        <h1>Order for <span>{{ $pizza->name }}</span></h1>
+        <p class="type"><b>Type:</b> {{ $pizza->type }}</p>
+        <p class="base"><b>Base:</b> {{ $pizza->base }}</p>
     </div>
+    <a href="/pizzas" class="back"><- Back to all pizzas</a>
 @endsection
