@@ -25,6 +25,8 @@
                 <h1 class="title">The North's <span>Best</span> Pizza</h1>
             </div>
 
+            <a href="/pizzas/create">Order a Pizza </a>
+
         </div>
     </div>
 @endsection
