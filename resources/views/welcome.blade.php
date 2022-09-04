@@ -19,14 +19,14 @@
         @endif
 
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-
-            <div class="text-center justify-center pt-8 sm:justify-start sm:pt-0">
-                <img src="/img/pizza-house.png" alt="Pizza">
-                <h1 class="title">The North's <span>Best</span> Pizza</h1>
+            <div class="text-center justify-center">
+                <div class="pt-8 sm:justify-start sm:pt-0">
+                    <img src="/img/pizza-house.png" alt="Pizza">
+                    <h1 class="title">The North's <span>Best</span> Pizza</h1>
+                </div>
+                <p class="mssg">{{ session('mssg')  }}</p>
+                <a href="/pizzas/create">Order a Pizza </a>
             </div>
-
-            <a href="/pizzas/create">Order a Pizza </a>
-
         </div>
     </div>
 @endsection
