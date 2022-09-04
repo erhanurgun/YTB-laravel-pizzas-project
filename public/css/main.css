@@ -24,15 +24,15 @@ body {
     float: right;
 }
 
-form {
+form.frm-order {
     border: 1px solid #fab700;
     margin: 20px;
-    width: 400px;
+    width: 370px;
     padding: 10px 0 15px 10px;
     border-radius: 3px;
 }
 
-input, textarea, button {
+input, textarea {
     width: 100%;
 }
 
@@ -40,19 +40,19 @@ select {
     width: 107.7%;
 }
 
-input, textarea, button, select {
+input, textarea, select {
     padding: 5px;
     border-radius: 3px;
 }
 
-input:hover, textarea:hover, button:hover, select:hover {
+input:hover, textarea:hover, select:hover {
     transition: all 300ms;
     background-color: #fff;
     border-color: #fab700;
 }
 
-input:hover, textarea:hover, button:hover, select:hover,
-input:focus, textarea:focus, button:focus, select:focus {
+input:hover, textarea:hover, select:hover,
+input:focus, textarea:focus, select:focus {
     outline: none;
 }
 

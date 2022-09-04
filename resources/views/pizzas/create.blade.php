@@ -4,7 +4,7 @@
     <div class="wrapper create-pizza">
         <h1>Create a new <span>pizza</span></h1>
 
-        <form action="/pizzas" method="POST">
+        <form class="frm-order" action="/pizzas" method="POST">
             @csrf {{-- güvenli form gönderme için gerekli --}}
             <table>
                 <tr>
