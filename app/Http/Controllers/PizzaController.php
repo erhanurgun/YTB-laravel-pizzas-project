@@ -45,7 +45,7 @@ class PizzaController extends Controller
         // error_log($pizza);
         $pizza->save();
 
-        return redirect('/')->with('mssg', 'Thank for your order');
+        return redirect('/')->with('mssg', 'Thank you for your order');
     }
 
     public function destroy($id)

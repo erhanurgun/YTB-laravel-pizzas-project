@@ -24,8 +24,13 @@
                     <img src="/img/pizza-house.png" alt="Pizza">
                     <h1 class="title">The North's <span>Best</span> Pizza</h1>
                 </div>
-                <p class="mssg">{{ session('mssg')  }}</p>
-                <a href="/pizzas/create">Order a Pizza </a>
+
+                @if(session('mssg'))
+                    <p class="mssg">{{ session('mssg')  }}</p>
+                @endif
+
+                <a class="btn-o" href="/pizzas">All Pizza </a>
+                <a class="btn" href="/pizzas/create">Order a Pizza </a>
             </div>
         </div>
     </div>

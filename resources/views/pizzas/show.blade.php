@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="wrapper pizza-details">
-        <h1>Order for <span>{{ $pizza->name }}</span></h1>
+        <h2>Order for <span>{{ $pizza->name }}</span></h2>
         <p class="type"><b>Type:</b> {{ $pizza->type }}</p>
         <p class="base"><b>Base:</b> {{ $pizza->base }}</p>
         <p class="toppings"><b>Extra toppings:</b></p>
@@ -14,11 +14,9 @@
         <form action="/pizzas/{{ $pizza->id }}" method="POST">
             @csrf
             @method('DELETE')
-            <button type="submit">Complete Order</button>
+            <button class="btn" type="submit">Complete Order</button>
         </form>
     </div>
 
-    <br>
-    <a href="/pizzas" class="back"><- Back to all pizzas</a>
-    <br><br>
+    <a class="back" href="/pizzas"><- Back to all pizzas</a>
 @endsection

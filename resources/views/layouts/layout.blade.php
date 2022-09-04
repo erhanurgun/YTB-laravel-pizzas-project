@@ -7,7 +7,13 @@
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Styles -->
+    <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/main.css">
+
+    @vite([
+    'resources/scss/app.scss',
+    'resources/scss/main.scss',
+    ])
 </head>
 <body class="antialiased">
 
@@ -16,5 +22,6 @@
 <footer>
     Copyright 2022 Pizza House
 </footer>
+
 </body>
 </html>

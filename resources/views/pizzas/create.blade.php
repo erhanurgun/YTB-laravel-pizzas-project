@@ -9,13 +9,13 @@
             <table>
                 <tr>
                     <td><label class="f-r" for="name">Your name:</label></td>
-                    <td><input type="text" name="name" id="name"></td>
+                    <td><input type="text" name="name" id="name" placeholder="enter your name"></td>
                 </tr>
                 <tr>
                     <td><label class="f-r" for="type">Choose pizza type:</label></td>
                     <td>
                         <select name="type" id="type">
-                            <option value="0" disabled selected>--- choose ---</option>
+                            <option value="0" disabled selected>--- choose action ---</option>
                             <option value="margherita">Margherita</option>
                             <option value="hawaiian">Hawaiian</option>
                             <option value="veg supreme">Veg Supreme</option>
@@ -27,7 +27,7 @@
                     <td><label class="f-r" for="base">Choose base type:</label></td>
                     <td>
                         <select name="base" id="base">
-                            <option value="0" disabled selected>--- choose ---</option>
+                            <option value="0" disabled selected>--- choose action ---</option>
                             <option value="chessy crust">Chessy Crust</option>
                             <option value="garlic crust">Garlic Crust</option>
                             <option value="thin & crispy">Thin & Crispy</option>

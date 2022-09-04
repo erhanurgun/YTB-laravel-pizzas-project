@@ -1,0 +1,77 @@
+/* Custom CSS*/
+.font-size-50px {
+  font-size: 50px;
+}
+
+h1 span {
+  color: #ef3b2d;
+}
+
+footer {
+  background: #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 50px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fab700;
+  padding: 12px 0;
+  color: #5e2195;
+}
+
+.f-r {
+  float: right;
+}
+
+form.frm-order {
+  border: 1px solid #fab700;
+  margin: 20px;
+  width: 370px;
+  padding: 10px 0 15px 10px;
+  border-radius: 3px;
+}
+
+input, textarea {
+  width: 100%;
+}
+
+select {
+  width: 107.7%;
+}
+
+input, textarea, select {
+  padding: 5px;
+  border-radius: 3px;
+}
+
+input:hover, textarea:hover, select:hover {
+  transition: all 300ms;
+  background-color: #fff;
+  border-color: #fab700;
+}
+
+input:hover, textarea:hover, select:hover,
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+input[type=submit] {
+  background-color: #fab700;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 17px;
+  border-radius: 3px;
+  padding: 10px 0px;
+  width: 104%;
+  border: 1px solid #cbcbcb;
+}
+
+input[type=submit]:hover {
+  transition: all 300ms;
+  background-color: #fff;
+  color: #fab700;
+  border: 1px solid #fab700;
+}/*# sourceMappingURL=main.css.map */

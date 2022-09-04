@@ -1,0 +1,260 @@
+$font-family: "Nunito", sans-serif;
+$color-purple-sm: #f5ebff;
+$color-purple: #5e2195;
+$color-silver: #636b6f;
+$color-silver-sm: #dadada;
+$color-red: crimson;
+$color-white: #fff;
+$color-white-sm: #f1f1f1;
+
+* {
+    outline: none;
+}
+
+html {
+    background-color: $color-white;
+    font-family: $font-family;
+    color: $color-silver;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    @extend html;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.links {
+    > a {
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        text-decoration: none;
+        color: $color-silver;
+        font-weight: 600;
+        padding: 0 25px;
+        font-size: 13px;
+    }
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+footer {
+    text-align: center;
+    background: #eee;
+    padding: 20px;
+}
+
+.wrapper {
+    margin: 30px auto;
+    max-width: 384px;
+    padding: 10px;
+
+    h2 {
+        text-align: center;
+
+        span {
+            color: $color-red;
+        }
+    }
+}
+
+a.back {
+    background-color: $color-purple-sm;
+    border: 1px solid $color-purple;
+    color: $color-purple;
+    text-align: center;
+    border-radius: 3px;
+    display: block;
+    padding: 10px;
+    width: 200px;
+    margin: 20px auto;
+    &:hover {
+        background-color: $color-purple;
+        border: 1px solid $color-white;
+        transition: all 200ms;
+        color: $color-white;
+    }
+}
+
+.btn {
+    border: 1px solid $color-purple;
+    text-transform: uppercase;
+    background: #5e2195;
+    color: $color-white;
+    border-radius: 3px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+
+    &:hover {
+        background-color: $color-red;
+        transition: all 200ms;
+    }
+}
+
+.btn-o {
+    @extend .btn;
+    background-color: $color-purple-sm;
+    color: $color-purple;
+    margin-right: 10px;
+
+    &:hover {
+        border: 1px solid $color-purple;
+        background-color: $color-purple;
+        color: $color-white;
+    }
+}
+
+.create-pizza {
+    background: $color-white-sm;
+    text-align: center;
+    padding: 20px;
+
+    input {
+        border: 1px solid transparent;
+        transition: all 200ms;
+        padding: 6px;
+        width: 93%;
+
+        &:hover {
+            border: 1px solid $color-purple;
+        }
+    }
+
+    input[type="submit"] {
+        @extend .btn;
+        border: 0;
+    }
+
+    input[type="checkbox"] {
+        margin: 10px 0;
+        accent-color: $color-purple;
+    }
+
+    label {
+        float: left;
+    }
+
+    td:first-child {
+        label {
+            float: right;
+        }
+    }
+
+    select {
+        border: 1px solid transparent;
+        transition: all 200ms;
+        color: $color-silver;
+        display: block;
+        padding: 7px;
+        width: 200px;
+
+        &:hover {
+            border-color: $color-purple;
+        }
+    }
+}
+
+.title {
+    text-transform: uppercase;
+    border-bottom: 2px solid;
+    color: $color-purple;
+    font-size: 50px;
+    padding: 12px 0;
+
+    img {
+        width: 44px;
+    }
+
+    span {
+        color: $color-red;
+    }
+}
+
+.mssg {
+    background-color: $color-purple-sm;
+    border: 1px dotted #5e2195;
+    border-radius: 3px;
+    font-size: 18px;
+    padding: 15px;
+    margin-bottom: 33px;
+    color: $color-purple;
+}
+
+.pizza-details {
+    background: $color-white-sm;
+    padding: 20px;
+
+    div {
+        padding: 10px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-silver-sm;
+        }
+
+
+        a.a-link {
+            transition: all 300ms;
+
+            &:hover {
+                color: $color-purple;
+            }
+        }
+    }
+
+
+}
+
+.pizza-index {
+    h1 {
+        margin-bottom: 40px;
+    }
+
+    .pizza-item {
+        background: #f4f4f4;
+        margin: 10px 0;
+        padding: 12px;
+
+        img {
+            display: inline-block;
+            width: 60px;
+        }
+
+        h4 {
+            display: inline-block;
+            font-weight: normal;
+            margin-left: 20px;
+
+            a {
+                text-decoration: none !important;
+                color: $color-silver;
+            }
+        }
+    }
+}
