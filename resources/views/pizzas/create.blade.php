@@ -1,8 +1,10 @@
-@extends('layouts.layout')
+@extends('layouts.app')
+
+@section('title', 'Create Order')
 
 @section('content')
     <div class="wrapper create-pizza">
-        <h1>Create a new <span>pizza</span></h1>
+        <h2 class="mb-4">Create a New Pizza</h2>
 
         <form class="frm-order" action="/pizzas" method="POST">
             @csrf {{-- güvenli form gönderme için gerekli --}}
@@ -41,19 +43,19 @@
                         <table>
                             <tr>
                                 <td><input type="checkbox" name="toppings[]" value="mushrooms" id="mushrooms"></td>
-                                <td><label for="mushrooms">Mushrooms</label></td>
+                                <td><label for="mushrooms">&nbsp; Mushrooms</label></td>
                             </tr>
                             <tr>
                                 <td><input type="checkbox" name="toppings[]" value="peppers" id="peppers"></td>
-                                <td><label for="peppers">Peppers</label></td>
+                                <td><label for="peppers">&nbsp; Peppers</label></td>
                             </tr>
                             <tr>
                                 <td><input type="checkbox" name="toppings[]" value="garlic" id="garlic"></td>
-                                <td><label for="garlic">Garlic</label></td>
+                                <td><label for="garlic">&nbsp; Garlic</label></td>
                             </tr>
                             <tr>
                                 <td><input type="checkbox" name="toppings[]" value="olives" id="olives"></td>
-                                <td><label for="olives">Olives</label></td>
+                                <td><label for="olives">&nbsp; Olives</label></td>
                             </tr>
                         </table>
                     </td>
@@ -63,6 +65,7 @@
                 </tr>
             </table>
         </form>
-
     </div>
+
+    <a class="back" href="{{ url('/') }}"><- Back to homepage</a>
 @endsection

@@ -5,14 +5,15 @@
         "build": "vite build",
         "watch": "vite -- --watch",
         "php": "php artisan serve",
-        "make-ctrl": "php artisan make:controller DemoController",
-        "make-migr": "php artisan make:migration create_demo_table",
-        "make-mode": "php artisan make:model Demo",
+        "make:ctrl": "php artisan make:controller DemoController",
+        "make:migr": "php artisan make:migration create_demo_table",
+        "make:mode": "php artisan make:model Demo",
         "migr": "php artisan migrate",
-        "migr-fr": "php artisan migrate:fresh",
+        "migr:fr": "php artisan migrate:fresh",
+        "migr:rb": "php artisan migrate:rollback",
         "scss": "npm add -D sass",
         "ui": "composer require laravel/ui",
-        "ui-vue": "php artisan ui vue --auth"
+        "ui:vue": "php artisan ui vue --auth"
     },
     "devDependencies": {
         "@popperjs/core": "^2.10.2",
@@ -25,5 +26,8 @@
         "sass": "^1.32.11",
         "vite": "^3.0.0",
         "vue": "^3.2.37"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.2.0"
     }
 }

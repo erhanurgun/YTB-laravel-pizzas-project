@@ -19,12 +19,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// bu kısımdaki sıralama önemli!
-Route::get('/pizzas', [PizzaController::class, 'index']);
-Route::get('/pizzas/create', [PizzaController::class, 'create']);
-Route::post('/pizzas', [PizzaController::class, 'store']);
-Route::get('/pizzas/{id}', [PizzaController::class, 'show']);
-Route::delete('/pizzas/{id}', [PizzaController::class, 'destroy']);
+Route::controller(PizzaController::class)->group(function () {
+    // bu kısımdaki sıralama önemli!
+    Route::get('/pizzas', 'index');
+    Route::get('/pizzas/create', 'create');
+    Route::post('/pizzas', 'store');
+    Route::get('/pizzas/{id}', 'show');
+    Route::delete('/pizzas/{id}', 'destroy');
+});
 
 Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');

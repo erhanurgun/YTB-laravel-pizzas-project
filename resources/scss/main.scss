@@ -1,7 +1,10 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+
 $font-family: "Nunito", sans-serif;
 $color-purple-sm: #f5ebff;
 $color-purple: #5e2195;
 $color-silver: #636b6f;
+$color-dark: #212529;
 $color-silver-sm: #dadada;
 $color-red: crimson;
 $color-white: #fff;
@@ -64,10 +67,18 @@ body {
     margin-bottom: 30px;
 }
 
+.navbar {
+    z-index: 1;
+}
+
 footer {
     text-align: center;
-    background: #eee;
+    background-color: $color-white-sm;
     padding: 20px;
+    margin-bottom: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .wrapper {
@@ -94,6 +105,7 @@ a.back {
     padding: 10px;
     width: 200px;
     margin: 20px auto;
+
     &:hover {
         background-color: $color-purple;
         border: 1px solid $color-white;
@@ -102,10 +114,9 @@ a.back {
     }
 }
 
-.btn {
+.button {
     border: 1px solid $color-purple;
-    text-transform: uppercase;
-    background: #5e2195;
+    background: $color-purple;
     color: $color-white;
     border-radius: 3px;
     margin-top: 20px;
@@ -115,11 +126,12 @@ a.back {
     &:hover {
         background-color: $color-red;
         transition: all 200ms;
+        color: $color-white;
     }
 }
 
-.btn-o {
-    @extend .btn;
+.button-o {
+    @extend .button;
     background-color: $color-purple-sm;
     color: $color-purple;
     margin-right: 10px;
@@ -135,12 +147,14 @@ a.back {
     background: $color-white-sm;
     text-align: center;
     padding: 20px;
+    width: 369px;
 
     input {
         border: 1px solid transparent;
         transition: all 200ms;
+        margin-bottom: 5px;
         padding: 6px;
-        width: 93%;
+        width: 100%;
 
         &:hover {
             border: 1px solid $color-purple;
@@ -148,13 +162,13 @@ a.back {
     }
 
     input[type="submit"] {
-        @extend .btn;
+        @extend .button;
         border: 0;
     }
 
     input[type="checkbox"] {
-        margin: 10px 0;
         accent-color: $color-purple;
+        margin: 10px 0;
     }
 
     label {
@@ -171,6 +185,7 @@ a.back {
         border: 1px solid transparent;
         transition: all 200ms;
         color: $color-silver;
+        margin-bottom: 5px;
         display: block;
         padding: 7px;
         width: 200px;
@@ -179,17 +194,25 @@ a.back {
             border-color: $color-purple;
         }
     }
+
+    h2 {
+        color: $color-purple;
+        border-bottom: 1px solid $color-silver-sm;
+    }
 }
 
 .title {
-    text-transform: uppercase;
     border-bottom: 2px solid;
     color: $color-purple;
-    font-size: 50px;
     padding: 12px 0;
+    margin-bottom: 30px;
 
     img {
-        width: 44px;
+        &.pizza-icon {
+            width: 44px;
+            margin-top: -17px;
+            margin-right: 5px;
+        }
     }
 
     span {
@@ -197,9 +220,36 @@ a.back {
     }
 }
 
+.logo {
+    .icon {
+        width: 140px;
+    }
+
+    .text {
+        margin-left: 7px;
+
+        strong {
+            color: $color-red;
+            font-weight: bold;
+        }
+    }
+}
+
+.txt-x {
+    font-size: 20px;
+}
+
+.txt-2x {
+    font-size: 27px;
+}
+
+.card {
+    margin-top: 22px;
+}
+
 .mssg {
     background-color: $color-purple-sm;
-    border: 1px dotted #5e2195;
+    border: 1px dotted $color-purple;
     border-radius: 3px;
     font-size: 18px;
     padding: 15px;
@@ -221,10 +271,23 @@ a.back {
 
         a.a-link {
             transition: all 300ms;
+            display: block;
+            text-align: center;
+            padding: 8px 0;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $color-silver-sm;
+            }
 
             &:hover {
                 color: $color-purple;
+                background-color: $color-purple-sm;
             }
+        }
+
+        &.no-data {
+            color: $color-purple;
+            text-align: center;
         }
     }
 
@@ -256,5 +319,38 @@ a.back {
                 color: $color-silver;
             }
         }
+    }
+}
+
+.fa {
+    color: $color-purple;
+}
+
+img {
+    &.img-hand {
+        width: 260px;
+    }
+}
+
+.nav-item {
+    font-size: 18px;
+
+    strong {
+        font-weight: 800;
+    }
+
+    span {
+        color: $color-purple;
+    }
+}
+
+.max-w-6xl {
+    width: 100%;
+}
+
+table {
+    .thead-dark {
+        background-color: $color-dark;
+        color: $color-white;
     }
 }

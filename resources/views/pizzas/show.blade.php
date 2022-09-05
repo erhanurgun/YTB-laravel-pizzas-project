@@ -1,4 +1,6 @@
-@extends('layouts.layout')
+@extends('layouts.app')
+
+@section('title', 'Order Detail')
 
 @section('content')
     <div class="wrapper pizza-details">
@@ -14,9 +16,9 @@
         <form action="/pizzas/{{ $pizza->id }}" method="POST">
             @csrf
             @method('DELETE')
-            <button class="btn" type="submit">Complete Order</button>
+            <button class="button" type="submit">Complete Order</button>
         </form>
     </div>
 
-    <a class="back" href="/pizzas"><- Back to all pizzas</a>
+    <a class="back" href="{{ url('/pizzas') }}"><- Back to all pizzas</a>
 @endsection
