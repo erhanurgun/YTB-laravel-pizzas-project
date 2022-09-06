@@ -21,11 +21,11 @@ Route::get('/', function () {
 
 Route::controller(PizzaController::class)->group(function () {
     // bu kısımdaki sıralama önemli!
-    Route::get('/pizzas', 'index')->middleware('auth');
-    Route::get('/pizzas/create', 'create');
-    Route::post('/pizzas', 'store');
-    Route::get('/pizzas/{id}', 'show')->middleware('auth');
-    Route::delete('/pizzas/{id}', 'destroy')->middleware('auth');
+    Route::get('/orders/pizzas', 'index')->name('pizzas.index')->middleware('auth');
+    Route::get('/orders/pizzas/create', 'create')->name('pizzas.create');
+    Route::post('/orders/pizzas', 'store')->name('pizzas.store');
+    Route::get('/orders/pizzas/{id}', 'show')->name('pizzas.show')->middleware('auth');
+    Route::delete('/orders/pizzas/{id}', 'destroy')->name('pizzas.destroy')->middleware('auth');
 });
 
 $blackList = [

@@ -6,7 +6,7 @@
     <div class="wrapper create-pizza">
         <h2 class="mb-4">Create a New Pizza</h2>
 
-        <form class="frm-order" action="/pizzas" method="POST">
+        <form class="frm-order" action="{{ route('pizzas.store') }}" method="POST">
             @csrf {{-- güvenli form gönderme için gerekli --}}
             <table>
                 <tr>
@@ -67,5 +67,5 @@
         </form>
     </div>
 
-    <a class="back" href="{{ url('/') }}"><- Back to homepage</a>
+    <a class="back" href="{{ route('pizzas.index') }}"><- Back to homepage</a>
 @endsection

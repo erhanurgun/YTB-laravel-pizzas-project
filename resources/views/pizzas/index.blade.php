@@ -40,7 +40,8 @@
                                 <td>{{ $pizza->type }}</td>
                                 <td>{{ $pizza->base  }}</td>
                                 <td class="text-center">
-                                    <a class="btn btn-sm btn-outline-warning" href="{{ url('/pizzas/' . $pizza->id) }}"
+                                    <a class="btn btn-sm btn-outline-warning"
+                                       href="{{ route('pizzas.show', $pizza->id) }}"
                                        data-toggle="tooltip" data-placement="top" title="See order details">
                                         <i class="fa fa-link"></i>
                                     </a>

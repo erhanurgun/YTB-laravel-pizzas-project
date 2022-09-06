@@ -18,8 +18,8 @@
 
                         {{ __('You are logged in!') }}
                         <p class="mt-4">
-                            <a class="button-o" href="{{ url('/pizzas') }}">View All Pizza Orders</a>
-                            <a class="button-o" href="{{ url('/pizzas/create') }}">Order a New Pizza</a>
+                            <a class="button-o" href="{{ route('pizzas.index') }}">View All Pizza Orders</a>
+                            <a class="button-o" href="{{ route('pizzas.create') }}">Order a New Pizza</a>
                             <a class="button-o" href="{{ url('/') }}">Goto Welcome Page</a>
                         </p>
                     </div>

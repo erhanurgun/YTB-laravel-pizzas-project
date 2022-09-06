@@ -59,6 +59,6 @@ class PizzaController extends Controller
         $pizza->delete();
 
         // return redirect('/pizzas');
-        return redirect('/pizzas')->with('mssg', 'Order confirmed');
+        return redirect(route('pizzas.index'))->with('mssg', 'Order confirmed');
     }
 }

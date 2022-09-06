@@ -17,8 +17,8 @@
                     <p class="mssg">{{ session('mssg')  }}</p>
                 @endif
 
-                <a class="button-o" href="{{ url('/pizzas') }}">All Pizza </a>
-                <a class="button" href="{{ url('/pizzas/create') }}">Order a Pizza </a>
+                <a class="button-o" href="{{ route('pizzas.index') }}">All Pizza </a>
+                <a class="button" href="{{ route('pizzas.create') }}">Order a Pizza </a>
             </div>
         </div>
     </div>
