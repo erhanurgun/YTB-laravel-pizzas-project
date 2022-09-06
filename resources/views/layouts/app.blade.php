@@ -50,7 +50,7 @@
                         @if (Route::has('login'))
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">
-                                   <strong>{{ __('Login ') }}</strong> &nbsp; <span>/</span>
+                                   <strong>{{ __('Login ') }}</strong>
                                 </a>
                             </li>
                         @endif

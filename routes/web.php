@@ -28,6 +28,9 @@ Route::controller(PizzaController::class)->group(function () {
     Route::delete('/pizzas/{id}', 'destroy')->middleware('auth');
 });
 
+$blackList = [
+    'register' => false
+];
+Auth::routes($blackList);
 
-Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
