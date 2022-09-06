@@ -8,12 +8,13 @@
         "make:ctrl": "php artisan make:controller DemoController",
         "make:migr": "php artisan make:migration create_demo_table",
         "make:mode": "php artisan make:model Demo",
+        "make:all": "php artisan make:model Demo -mc",
         "migr": "php artisan migrate",
         "migr:fr": "php artisan migrate:fresh",
         "migr:rb": "php artisan migrate:rollback",
-        "scss": "npm add -D sass",
         "ui": "composer require laravel/ui",
-        "ui:vue": "php artisan ui vue --auth"
+        "ui:vue": "php artisan ui vue --auth",
+        "clear": "composer dump-autoload"
     },
     "devDependencies": {
         "@popperjs/core": "^2.10.2",
