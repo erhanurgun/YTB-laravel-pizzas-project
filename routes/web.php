@@ -21,12 +21,13 @@ Route::get('/', function () {
 
 Route::controller(PizzaController::class)->group(function () {
     // bu kısımdaki sıralama önemli!
-    Route::get('/pizzas', 'index');
+    Route::get('/pizzas', 'index')->middleware('auth');
     Route::get('/pizzas/create', 'create');
     Route::post('/pizzas', 'store');
-    Route::get('/pizzas/{id}', 'show');
-    Route::delete('/pizzas/{id}', 'destroy');
+    Route::get('/pizzas/{id}', 'show')->middleware('auth');
+    Route::delete('/pizzas/{id}', 'destroy')->middleware('auth');
 });
+
 
 Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
